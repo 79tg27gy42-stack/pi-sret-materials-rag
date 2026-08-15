@@ -1,0 +1,7 @@
+constraint_family,dual_disagreement_type,count
+formation_energy,plus_only_violation,10
+formation_energy,max_only_violation,2
+pressure,plus_only_violation,2
+band_gap,max_only_violation,1
+pressure,max_only_violation,1
+superconductivity,plus_only_violation,1

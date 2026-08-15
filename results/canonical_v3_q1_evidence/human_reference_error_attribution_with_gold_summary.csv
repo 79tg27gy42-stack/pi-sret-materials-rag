@@ -1,0 +1,6 @@
+error_category,fp,fn,total,covered,main_cause
+Coverage limitation,0,1,1,1,The current predicates do not fully model target material identity or cross-material context.
+Evidence-linking failure,1,0,1,1,Local qualifiers/evidence were not bound to the correct claim.
+Extraction error,3,1,4,4,Formula/material span extraction missed entities or misparsed abbreviations.
+Mixed / unresolved,9,0,9,0,Record was not covered by the completed extraction-gold audit.
+Scientific ambiguity,2,1,3,3,"Extracted spans were present, but reference-state, phase, or identity semantics remained ambiguous."

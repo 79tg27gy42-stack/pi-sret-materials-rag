@@ -1,0 +1,15 @@
+constraint_family,disagreement_type,count
+formation_energy,auto_false_negative,123
+pressure,auto_false_negative,34
+band_gap,auto_false_negative,27
+stability,auto_false_positive,21
+superconductivity,auto_false_positive,15
+chemical_formula,auto_false_negative,10
+natural_claim,auto_false_positive,10
+temperature,auto_false_negative,10
+formation_energy,auto_false_positive,7
+superconductivity,auto_false_negative,7
+stability,auto_false_negative,6
+temperature,auto_false_positive,6
+band_gap,auto_false_positive,4
+natural_claim,auto_false_negative,1

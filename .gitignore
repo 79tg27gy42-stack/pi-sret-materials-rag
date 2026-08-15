@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+results/reproduced_*/
+figures/generated/
+.DS_Store
+.env

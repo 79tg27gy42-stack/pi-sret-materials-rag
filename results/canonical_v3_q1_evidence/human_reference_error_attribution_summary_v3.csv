@@ -1,0 +1,6 @@
+attribution_category,fp,fn,total,evidence_status,basis
+Confirmed extraction error,0,0,0,not estimable,No span/entity gold annotations or independently corrected structured fields are present in the human reference.
+Confirmed rule-logic error,0,0,0,not estimable,Response-level adjudications do not identify whether a matched span was correct before predicate evaluation.
+Confirmed coverage limitation,0,0,0,not estimable,False negatives may reflect absent rules or missed extraction; the available labels do not distinguish them.
+Observed false-positive disagreements,15,0,15,observed,PI-SRET violation versus human-adjudicated non-violation; not a confirmed root-cause classification.
+Observed false-negative disagreements,0,3,3,observed,Human-adjudicated violation versus no PI-SRET trigger; not a confirmed root-cause classification.

@@ -1,0 +1,280 @@
+{
+  "protocol": {
+    "n": 200,
+    "reviewers": 2,
+    "adjudication_method": "protocol_rule_resolution",
+    "adjudication_disclosure": "Two adjudication mechanisms were applied to the 27 reviewer disagreements and are both reported. The `protocol_adjudicated_labels` in this block use prespecified rule resolution that separates scientific-constraint violations from answer-relevance and source-adequacy issues. A separate independent third materials-science reviewer, blind to the two annotators' decisions, adjudicated all 27 disagreements; its labels are reported under `third_expert_adjudication` and `third_human_adjudicated_labels`. The two resolutions agreed on all 27 disagreements (agreement 1.0). The primary analysis uses the third-human-adjudicated reference.",
+    "bootstrap_iterations": 5000,
+    "bootstrap_seed": 42,
+    "bootstrap_cluster": "base_task_id"
+  },
+  "completion": {
+    "expert_a": 200,
+    "expert_b": 200,
+    "missing_required_fields": 0,
+    "uncertain_labels": 0
+  },
+  "expert_labels": {
+    "expert_a_violation": 108,
+    "expert_a_no_violation": 92,
+    "expert_b_violation": 81,
+    "expert_b_no_violation": 119,
+    "agreed_violation": 81,
+    "agreed_no_violation": 92,
+    "disagreements": 27
+  },
+  "expert_agreement": {
+    "n": 200,
+    "tn": 92,
+    "fp": 0,
+    "fn": 27,
+    "tp": 81,
+    "agreement": 0.865,
+    "kappa": 0.7340425531914894,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571428571428571
+  },
+  "expert_agreement_ci": {
+    "agreement": {
+      "low": 0.8117585463504774,
+      "high": 0.912621359223301
+    },
+    "kappa": {
+      "low": 0.6336610256770359,
+      "high": 0.823866837272079
+    }
+  },
+  "secondary_expert_agreement": {
+    "severity_exact_agreement": 0.855,
+    "severity_quadratic_weighted_kappa": 0.8924166885331934,
+    "violation_type_n_both_positive": 81,
+    "violation_type_raw_exact_match": 0.19753086419753085,
+    "violation_type_core_exact_match_excluding_source_reliability": 1.0,
+    "source_adequacy_agreement": 1.0,
+    "confidence_agreement": 1.0
+  },
+  "protocol_adjudicated_labels": {
+    "violation": 85,
+    "no_violation": 115,
+    "violation_rate": 0.425
+  },
+  "third_expert_adjudication": {
+    "n_disagreements": 27,
+    "violation": 4,
+    "no_violation": 23,
+    "sides_with_expert_a": 4,
+    "sides_with_expert_b": 23,
+    "uncertain": 0,
+    "agreement_with_protocol_resolution": 1.0
+  },
+  "third_human_adjudicated_labels": {
+    "violation": 85,
+    "no_violation": 115,
+    "violation_rate": 0.425
+  },
+  "auto_vs_third_human_adjudicated": {
+    "n": 200,
+    "tn": 100,
+    "fp": 15,
+    "fn": 3,
+    "tp": 82,
+    "agreement": 0.91,
+    "kappa": 0.8191863385233552,
+    "precision": 0.845360824742268,
+    "recall": 0.9647058823529412,
+    "f1": 0.9010989010989011
+  },
+  "auto_vs_third_human_adjudicated_ci": {
+    "agreement": {
+      "low": 0.8648648648648649,
+      "high": 0.9483568075117371
+    },
+    "kappa": {
+      "low": 0.7285675049429042,
+      "high": 0.8951472133437629
+    },
+    "precision": {
+      "low": 0.7692307692307693,
+      "high": 0.912621359223301
+    },
+    "recall": {
+      "low": 0.9186046511627907,
+      "high": 1.0
+    },
+    "f1": {
+      "low": 0.852267684238838,
+      "high": 0.9423076923076923
+    }
+  },
+  "qwen_plus_vs_third_human_adjudicated": {
+    "n": 200,
+    "tn": 91,
+    "fp": 24,
+    "fn": 0,
+    "tp": 85,
+    "agreement": 0.88,
+    "kappa": 0.7631968426245683,
+    "precision": 0.7798165137614679,
+    "recall": 1.0,
+    "f1": 0.8762886597938144
+  },
+  "qwen_max_vs_third_human_adjudicated": {
+    "n": 200,
+    "tn": 100,
+    "fp": 15,
+    "fn": 0,
+    "tp": 85,
+    "agreement": 0.925,
+    "kappa": 0.8500000000000001,
+    "precision": 0.85,
+    "recall": 1.0,
+    "f1": 0.9189189189189189
+  },
+  "human_referenced_error_analysis": {
+    "total": 18,
+    "false_positive": 15,
+    "false_negative": 3,
+    "by_error_and_family": {
+      "false_negative:superconductivity": 2,
+      "false_negative:temperature": 1,
+      "false_positive:band_gap": 1,
+      "false_positive:formation_energy": 8,
+      "false_positive:stability": 1,
+      "false_positive:superconductivity": 4,
+      "false_positive:temperature": 1
+    },
+    "by_error_and_rule": {
+      "false_negative:no_rule_triggered": 3,
+      "false_positive:cautious_superconductivity_claim": 1,
+      "false_positive:elemental_formation_energy_reference_conflict": 7,
+      "false_positive:formation_energy_typical_range": 1,
+      "false_positive:valid_chemical_symbols": 6
+    }
+  },
+  "primary_consensus_reference": {
+    "definition": "Records receiving the same binary label from both blinded reviewers; no protocol resolution is used.",
+    "violation": 81,
+    "no_violation": 92,
+    "n": 173,
+    "tn": 80,
+    "fp": 12,
+    "fn": 1,
+    "tp": 80,
+    "agreement": 0.9248554913294798,
+    "kappa": 0.8503161397670549,
+    "precision": 0.8695652173913043,
+    "recall": 0.9876543209876543,
+    "f1": 0.9248554913294798
+  },
+  "primary_consensus_reference_ci": {
+    "agreement": {
+      "low": 0.879746835443038,
+      "high": 0.9622666869547575
+    },
+    "kappa": {
+      "low": 0.7586185870479394,
+      "high": 0.9241247686208482
+    },
+    "precision": {
+      "low": 0.797752808988764,
+      "high": 0.934078771695594
+    },
+    "recall": {
+      "low": 0.96,
+      "high": 1.0
+    },
+    "f1": {
+      "low": 0.880952380952381,
+      "high": 0.9620253164556963
+    }
+  },
+  "reviewer_specific_sensitivity": {
+    "auto_vs_expert_a": {
+      "n": 200,
+      "tn": 80,
+      "fp": 12,
+      "fn": 23,
+      "tp": 85,
+      "agreement": 0.825,
+      "kappa": 0.6508379888268155,
+      "precision": 0.8762886597938144,
+      "recall": 0.7870370370370371,
+      "f1": 0.8292682926829268
+    },
+    "auto_vs_expert_b": {
+      "n": 200,
+      "tn": 102,
+      "fp": 17,
+      "fn": 1,
+      "tp": 80,
+      "agreement": 0.91,
+      "kappa": 0.8189681182741628,
+      "precision": 0.8247422680412371,
+      "recall": 0.9876543209876543,
+      "f1": 0.898876404494382
+    }
+  },
+  "auto_vs_protocol_adjudicated": {
+    "n": 200,
+    "tn": 100,
+    "fp": 15,
+    "fn": 3,
+    "tp": 82,
+    "agreement": 0.91,
+    "kappa": 0.8191863385233552,
+    "precision": 0.845360824742268,
+    "recall": 0.9647058823529412,
+    "f1": 0.9010989010989011
+  },
+  "auto_vs_protocol_adjudicated_ci": {
+    "agreement": {
+      "low": 0.8648648648648649,
+      "high": 0.9483568075117371
+    },
+    "kappa": {
+      "low": 0.7285675049429042,
+      "high": 0.8951472133437629
+    },
+    "precision": {
+      "low": 0.7692307692307693,
+      "high": 0.912621359223301
+    },
+    "recall": {
+      "low": 0.9186046511627907,
+      "high": 1.0
+    },
+    "f1": {
+      "low": 0.852267684238838,
+      "high": 0.9423076923076923
+    }
+  },
+  "qwen_plus_vs_protocol_adjudicated": {
+    "n": 200,
+    "tn": 91,
+    "fp": 24,
+    "fn": 0,
+    "tp": 85,
+    "agreement": 0.88,
+    "kappa": 0.7631968426245683,
+    "precision": 0.7798165137614679,
+    "recall": 1.0,
+    "f1": 0.8762886597938144
+  },
+  "qwen_max_vs_protocol_adjudicated": {
+    "n": 200,
+    "tn": 100,
+    "fp": 15,
+    "fn": 0,
+    "tp": 85,
+    "agreement": 0.925,
+    "kappa": 0.8500000000000001,
+    "precision": 0.85,
+    "recall": 1.0,
+    "f1": 0.9189189189189189
+  },
+  "data_quality": {
+    "expert_a_no_label_with_non_no_violation_type": 12,
+    "expert_b_no_label_with_non_no_violation_type": 0
+  }
+}

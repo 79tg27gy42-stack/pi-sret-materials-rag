@@ -1,0 +1,30 @@
+project:
+  name: sret-materials-rag
+  primary_domain: materials
+  theory_version: SRET_V3
+
+experiment_a:
+  name: semantic_constraint_divergence_deepseek_r1_safety
+  hypothesis: H1
+  input_path: data/processed/deepseek_r1_safety_full_standard.jsonl
+  annotation_path: data/annotations/deepseek_r1_safety_author_audit.csv
+  output_dir: results/exp_a_deepseek_r1_safety
+  faithfulness_method: manual_column
+  bootstrap_samples: 1000
+  random_seed: 42
+  target_pearson_r_upper_bound: 0.3
+  falsification_pearson_r: 0.7
+
+experiment_b:
+  name: attribution_deepseek_r1_safety
+  hypothesis: H2
+  input_path: data/llm_outputs/deepseek_r1_safety_full_standard.csv
+  output_dir: results/exp_b_deepseek_r1_safety
+  random_seed: 42
+
+experiment_c:
+  name: repair_deepseek_r1_safety
+  hypothesis: H3
+  input_path: data/llm_outputs/deepseek_r1_safety_full_standard.csv
+  output_dir: results/exp_c_deepseek_r1_safety
+  random_seed: 42

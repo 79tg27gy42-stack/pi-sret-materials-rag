@@ -1,0 +1,37 @@
+project:
+  name: sret-materials-rag
+  primary_domain: materials
+  theory_version: SRET_V3
+
+experiment_a:
+  name: semantic_constraint_divergence
+  hypothesis: H1
+  input_path: data/raw/materials_qa_seed.jsonl
+  annotation_path: data/annotations/h1_annotation_template.csv
+  faithfulness_method: lexical_overlap
+  constraint_path: data/constraints/materials_constraints.yaml
+  output_dir: results/exp_a
+  target_pearson_r_upper_bound: 0.3
+  falsification_pearson_r: 0.7
+  bootstrap_samples: 1000
+  random_seed: 42
+  readiness_thresholds:
+    min_samples: 100
+    preferred_samples: 200
+    min_status_groups: 3
+    min_expert_labeled: 30
+    publishable_faithfulness_methods:
+      - provided_column
+      - llm_judge
+      - ragas
+      - trulens
+
+experiment_b:
+  name: causal_vs_correlational_attribution
+  hypothesis: H2
+  status: scaffold
+
+experiment_c:
+  name: minimal_repair_achievability
+  hypothesis: H3
+  status: scaffold

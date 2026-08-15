@@ -1,0 +1,12 @@
+{
+  "input": "data/processed/canonical_v3/ragas_stratified_372_v3.jsonl",
+  "backend": "ragas_qwen_plus_complete_optimized_rules",
+  "n_samples": 372,
+  "valid_ragas_faithfulness": 372,
+  "valid_answer_relevancy": 372,
+  "mean_ragas_faithfulness": 0.6721774193548388,
+  "mean_answer_relevancy": 0.6911508892503198,
+  "mean_pi_sret_constraint": 0.5591397849462365,
+  "high_faithfulness_low_constraint_cases": 54,
+  "labels_recomputed_from_cached_answers": true
+}

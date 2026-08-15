@@ -1,0 +1,11 @@
+pi_sret_violation,count
+band_gap_physical_range,15
+elemental_formation_energy_reference_conflict,15
+formation_energy_typical_range,14
+valid_chemical_symbols,8
+non_negative_band_gap,4
+cautious_stability_claim,1
+cautious_superconductivity_claim,1
+conductivity_band_gap_consistency,1
+non_negative_absolute_temperature,1
+non_negative_pressure,1

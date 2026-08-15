@@ -1,0 +1,10 @@
+{
+  "n_samples": 2466,
+  "optimized_auto_violation_rate": 0.45093268450932683,
+  "judge_violation_rate": 0.513787510137875,
+  "optimized_agreement_rate": 0.8860502838605029,
+  "optimized_cohen_kappa_vs_judge": 0.7727156139157428,
+  "optimized_disagreements": 281,
+  "labels_recomputed_from_cached_answers": true,
+  "llm_judge_scores_reused_without_api_calls": true
+}

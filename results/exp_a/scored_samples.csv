@@ -1,0 +1,6 @@
+sample_id,domain,document_status,faithfulness_score,faithfulness_method,constraint_score,constraint_violations
+mat_001,materials,current,0.5,lexical_overlap,1.0,
+mat_002,materials,outdated_or_incorrect,0.7777777777777778,lexical_overlap,0.0,non_negative_band_gap
+mat_003,materials,current,0.2222222222222222,lexical_overlap,1.0,
+mat_004,materials,current,0.5555555555555556,lexical_overlap,1.0,
+mat_005,materials,outdated_or_incorrect,0.5,lexical_overlap,0.0,valid_chemical_symbols

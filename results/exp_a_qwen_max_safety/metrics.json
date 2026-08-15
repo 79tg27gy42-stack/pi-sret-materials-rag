@@ -1,0 +1,46 @@
+{
+  "experiment": "semantic_constraint_divergence_qwen_max_safety",
+  "hypothesis": "H1",
+  "n_samples": 372,
+  "faithfulness_method": "manual_column",
+  "pearson_r": null,
+  "pearson_bootstrap_ci": [
+    null,
+    null
+  ],
+  "spearman_rho": null,
+  "spearman_bootstrap_ci": [
+    null,
+    null
+  ],
+  "mean_faithfulness": 0.967741935483871,
+  "mean_constraint_score": 1.0,
+  "violation_rate": 0.0,
+  "by_document_status": {
+    "current": {
+      "n_samples": 60,
+      "pearson_r": null,
+      "pearson_bootstrap_ci": [
+        null,
+        null
+      ],
+      "mean_faithfulness": 1.0,
+      "mean_constraint_score": 1.0,
+      "violation_rate": 0.0
+    },
+    "outdated_or_incorrect": {
+      "n_samples": 312,
+      "pearson_r": null,
+      "pearson_bootstrap_ci": [
+        null,
+        null
+      ],
+      "mean_faithfulness": 0.9615384615384616,
+      "mean_constraint_score": 1.0,
+      "violation_rate": 0.0
+    }
+  },
+  "expert_agreement": null,
+  "target_pearson_r_upper_bound": 0.3,
+  "falsification_pearson_r": 0.7
+}

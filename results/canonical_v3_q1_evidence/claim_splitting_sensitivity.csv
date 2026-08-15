@@ -1,0 +1,4 @@
+segmentation,mean_support,high_support_n,divergence_n
+atomic,0.7353508463661619,136,10
+sentence,0.7292153604467908,136,10
+whole_answer,0.7279008763198069,136,10

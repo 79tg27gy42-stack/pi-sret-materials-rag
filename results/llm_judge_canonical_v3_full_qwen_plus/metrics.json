@@ -1,0 +1,10 @@
+{
+  "input": "data/processed/canonical_v3/llm_judge_full_pool_v3.jsonl",
+  "backend": "llm",
+  "n_samples": 2466,
+  "agreement_rate": 0.8625304136253041,
+  "auto_violation_rate": 0.43633414436334145,
+  "judge_violation_rate": 0.513787510137875,
+  "n_disagreements": 339,
+  "cohen_kappa_vs_auto_constraint": 0.7260228089827986
+}

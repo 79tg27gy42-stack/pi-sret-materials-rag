@@ -1,0 +1,30 @@
+project:
+  name: sret-materials-rag
+  primary_domain: materials
+  theory_version: SRET_V3
+
+experiment_a:
+  name: semantic_constraint_divergence_local_rag_baseline
+  hypothesis: H1
+  input_path: data/processed/local_rag_baseline_outputs.jsonl
+  annotation_path: data/annotations/local_rag_author_audit.csv
+  output_dir: results/exp_a_local_rag
+  faithfulness_method: lexical_overlap
+  bootstrap_samples: 1000
+  random_seed: 42
+  target_pearson_r_upper_bound: 0.3
+  falsification_pearson_r: 0.7
+
+experiment_b:
+  name: local_rag_attribution_pilot
+  hypothesis: H2
+  input_path: data/rag_outputs/local_rag_baseline_outputs.csv
+  output_dir: results/exp_b_local_rag_attribution
+  random_seed: 42
+
+experiment_c:
+  name: local_rag_minimal_constraint_repair
+  hypothesis: H3
+  input_path: data/rag_outputs/local_rag_baseline_outputs.csv
+  output_dir: results/exp_c_local_rag_repair
+  random_seed: 42

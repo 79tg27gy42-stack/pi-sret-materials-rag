@@ -1,0 +1,12 @@
+embedding:
+  provider: placeholder
+  model: lexical-baseline
+
+generator:
+  provider: placeholder
+  model: deterministic-baseline
+
+faithfulness_evaluator:
+  provider: local
+  model: token-overlap-baseline
+

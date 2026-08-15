@@ -1,0 +1,46 @@
+{
+  "experiment": "semantic_constraint_divergence",
+  "hypothesis": "H1",
+  "n_samples": 5,
+  "faithfulness_method": "lexical_overlap",
+  "pearson_r": -0.5891628475153438,
+  "pearson_bootstrap_ci": [
+    -1.0,
+    0.6123724356957945
+  ],
+  "spearman_rho": -0.4442616583193193,
+  "spearman_bootstrap_ci": [
+    -1.0,
+    0.6123724356957945
+  ],
+  "mean_faithfulness": 0.5111111111111111,
+  "mean_constraint_score": 0.6,
+  "violation_rate": 0.4,
+  "by_document_status": {
+    "current": {
+      "n_samples": 3,
+      "pearson_r": null,
+      "pearson_bootstrap_ci": [
+        null,
+        null
+      ],
+      "mean_faithfulness": 0.4259259259259259,
+      "mean_constraint_score": 1.0,
+      "violation_rate": 0.0
+    },
+    "outdated_or_incorrect": {
+      "n_samples": 2,
+      "pearson_r": null,
+      "pearson_bootstrap_ci": [
+        null,
+        null
+      ],
+      "mean_faithfulness": 0.6388888888888888,
+      "mean_constraint_score": 0.0,
+      "violation_rate": 1.0
+    }
+  },
+  "expert_agreement": null,
+  "target_pearson_r_upper_bound": 0.3,
+  "falsification_pearson_r": 0.7
+}

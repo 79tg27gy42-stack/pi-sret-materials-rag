@@ -1,0 +1,7 @@
+document_status,disagreement_type,count
+current,auto_false_negative,194
+current,auto_false_positive,31
+incomplete,auto_false_positive,31
+incomplete,auto_false_negative,15
+outdated_or_incorrect,auto_false_negative,9
+outdated_or_incorrect,auto_false_positive,1

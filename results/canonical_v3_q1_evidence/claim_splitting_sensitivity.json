@@ -1,0 +1,14 @@
+{
+  "threshold": 0.8,
+  "divergence_jaccard": {
+    "atomic_vs_atomic": 1.0,
+    "atomic_vs_sentence": 1.0,
+    "atomic_vs_whole_answer": 1.0,
+    "sentence_vs_atomic": 1.0,
+    "sentence_vs_sentence": 1.0,
+    "sentence_vs_whole_answer": 1.0,
+    "whole_answer_vs_atomic": 1.0,
+    "whole_answer_vs_sentence": 1.0,
+    "whole_answer_vs_whole_answer": 1.0
+  }
+}

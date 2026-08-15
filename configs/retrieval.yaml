@@ -1,0 +1,10 @@
+retrieval:
+  backend: in_memory
+  top_k: 3
+  chunk_size: 800
+  chunk_overlap: 120
+
+corpus:
+  source_dir: data/raw/corpus
+  processed_path: data/processed/corpus_chunks.jsonl
+

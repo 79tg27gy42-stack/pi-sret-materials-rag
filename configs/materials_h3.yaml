@@ -1,0 +1,11 @@
+project:
+  name: sret-materials-rag
+  primary_domain: materials
+  theory_version: SRET_V3
+
+experiment_c:
+  name: minimal_constraint_repair_pilot
+  hypothesis: H3
+  input_path: data/candidates/h1_expanded_diverse_with_faithfulness.csv
+  output_dir: results/exp_c_repair
+  random_seed: 42

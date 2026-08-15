@@ -1,0 +1,305 @@
+{
+  "version": "canonical_v3",
+  "sizes": {
+    "evaluation_manifest_all_records": 11434,
+    "primary_response_manifest": 2811,
+    "llm_judge_full_pool": 2466,
+    "ragas_stratified_372": 372,
+    "dual_judge_stratified_200": 200,
+    "unique_base_tasks_primary": 1653,
+    "unique_contexts_primary": 1592,
+    "unique_questions_primary": 628,
+    "full_response_manifest": 11434
+  },
+  "primary_breakdown": {
+    "by_dataset_role": {
+      "mp_derived_balanced_controlled": 1387,
+      "natural_source_linked": 500,
+      "controlled_candidate": 105,
+      "llm_generation": 480,
+      "local_rag": 120,
+      "official_only_rag": 120,
+      "supplementary_constraint_probe": 99
+    },
+    "by_source_dataset": {
+      "mp_balanced_constraints_v3": 1387,
+      "natural_noisy_arxiv_v2": 500,
+      "controlled_diverse_prefilled": 105,
+      "deepseek_r1_naive": 120,
+      "deepseek_r1_safety": 120,
+      "qwen_max_naive": 120,
+      "qwen_max_safety": 120,
+      "local_rag_naive": 120,
+      "local_rag_official": 120,
+      "supplementary_constraint_coverage": 99
+    },
+    "by_model": {
+      "mp_property_derived": 1387,
+      "extractive_real_arxiv": 500,
+      "prefilled_context_support": 105,
+      "deepseek-r1": 240,
+      "qwen-max": 240,
+      "local_rule_rag": 240,
+      "llm_diverse_probe": 99
+    },
+    "by_mode": {
+      "controlled_balanced": 1387,
+      "matched_and_mismatched": 500,
+      "diverse_prefilled": 105,
+      "naive_context": 360,
+      "safety_aware": 240,
+      "official_only": 120,
+      "constraint_coverage": 99
+    },
+    "by_document_status": {
+      "outdated_or_incorrect": 891,
+      "current": 1217,
+      "incomplete": 703
+    },
+    "by_constraint_family": {
+      "band_gap": 500,
+      "chemical_formula": 301,
+      "formation_energy": 500,
+      "natural_claim": 168,
+      "pressure": 177,
+      "stability": 500,
+      "superconductivity": 226,
+      "temperature": 439
+    },
+    "by_source_kind": {
+      "materials_project_derived": 1567,
+      "real_arxiv_abstract": 590,
+      "synthetic_constraint_probe": 195,
+      "derived_response": 459
+    }
+  },
+  "llm_pool_breakdown": {
+    "by_dataset_role": {
+      "mp_derived_balanced_controlled": 1387,
+      "natural_source_linked": 500,
+      "llm_generation": 480,
+      "supplementary_constraint_probe": 99
+    },
+    "by_source_dataset": {
+      "mp_balanced_constraints_v3": 1387,
+      "natural_noisy_arxiv_v2": 500,
+      "deepseek_r1_naive": 120,
+      "deepseek_r1_safety": 120,
+      "qwen_max_naive": 120,
+      "qwen_max_safety": 120,
+      "supplementary_constraint_coverage": 99
+    },
+    "by_model": {
+      "mp_property_derived": 1387,
+      "extractive_real_arxiv": 500,
+      "deepseek-r1": 240,
+      "qwen-max": 240,
+      "llm_diverse_probe": 99
+    },
+    "by_mode": {
+      "controlled_balanced": 1387,
+      "matched_and_mismatched": 500,
+      "naive_context": 240,
+      "safety_aware": 240,
+      "constraint_coverage": 99
+    },
+    "by_document_status": {
+      "outdated_or_incorrect": 786,
+      "current": 977,
+      "incomplete": 703
+    },
+    "by_constraint_family": {
+      "band_gap": 500,
+      "chemical_formula": 166,
+      "formation_energy": 500,
+      "natural_claim": 168,
+      "pressure": 147,
+      "stability": 500,
+      "superconductivity": 151,
+      "temperature": 334
+    },
+    "by_source_kind": {
+      "materials_project_derived": 1507,
+      "real_arxiv_abstract": 500,
+      "derived_response": 459
+    }
+  },
+  "ragas_372_breakdown": {
+    "by_dataset_role": {
+      "llm_generation": 79,
+      "mp_derived_balanced_controlled": 204,
+      "natural_source_linked": 72,
+      "supplementary_constraint_probe": 17
+    },
+    "by_source_dataset": {
+      "deepseek_r1_naive": 20,
+      "deepseek_r1_safety": 20,
+      "qwen_max_naive": 20,
+      "qwen_max_safety": 19,
+      "mp_balanced_constraints_v3": 204,
+      "natural_noisy_arxiv_v2": 72,
+      "supplementary_constraint_coverage": 17
+    },
+    "by_model": {
+      "deepseek-r1": 40,
+      "qwen-max": 39,
+      "mp_property_derived": 204,
+      "extractive_real_arxiv": 72,
+      "llm_diverse_probe": 17
+    },
+    "by_mode": {
+      "naive_context": 40,
+      "safety_aware": 39,
+      "controlled_balanced": 204,
+      "matched_and_mismatched": 72,
+      "constraint_coverage": 17
+    },
+    "by_document_status": {
+      "current": 147,
+      "outdated_or_incorrect": 121,
+      "incomplete": 104
+    },
+    "by_constraint_family": {
+      "pressure": 25,
+      "chemical_formula": 28,
+      "temperature": 53,
+      "stability": 72,
+      "formation_energy": 74,
+      "band_gap": 74,
+      "superconductivity": 22,
+      "natural_claim": 24
+    },
+    "by_source_kind": {
+      "derived_response": 77,
+      "materials_project_derived": 223,
+      "real_arxiv_abstract": 72
+    }
+  },
+  "dual_200_breakdown": {
+    "by_dataset_role": {
+      "llm_generation": 32,
+      "mp_derived_balanced_controlled": 113,
+      "natural_source_linked": 43,
+      "supplementary_constraint_probe": 12
+    },
+    "by_source_dataset": {
+      "deepseek_r1_naive": 8,
+      "deepseek_r1_safety": 8,
+      "qwen_max_naive": 8,
+      "qwen_max_safety": 8,
+      "mp_balanced_constraints_v3": 113,
+      "natural_noisy_arxiv_v2": 43,
+      "supplementary_constraint_coverage": 12
+    },
+    "by_model": {
+      "deepseek-r1": 16,
+      "qwen-max": 16,
+      "mp_property_derived": 113,
+      "extractive_real_arxiv": 43,
+      "llm_diverse_probe": 12
+    },
+    "by_mode": {
+      "naive_context": 16,
+      "safety_aware": 16,
+      "controlled_balanced": 113,
+      "matched_and_mismatched": 43,
+      "constraint_coverage": 12
+    },
+    "by_document_status": {
+      "current": 79,
+      "outdated_or_incorrect": 62,
+      "incomplete": 59
+    },
+    "by_constraint_family": {
+      "pressure": 13,
+      "chemical_formula": 13,
+      "temperature": 23,
+      "stability": 40,
+      "formation_energy": 41,
+      "band_gap": 42,
+      "superconductivity": 14,
+      "natural_claim": 14
+    },
+    "by_source_kind": {
+      "derived_response": 36,
+      "materials_project_derived": 121,
+      "real_arxiv_abstract": 43
+    }
+  },
+  "quality_notes": [
+    "Counts distinguish base tasks from evaluated response records; model/mode variants are not treated as independent base tasks.",
+    "The RAGAS and dual-judge subsets are deterministic stratified samples over dataset role, model, mode, document status, and constraint family.",
+    "The natural arXiv split is source-linked to real arXiv metadata, while controlled stress splits remain diagnostic rather than natural benchmark data."
+  ],
+  "full_response_breakdown": {
+    "by_dataset_role": {
+      "controlled_candidate": 372,
+      "mp_derived_balanced_controlled": 8000,
+      "supplementary_constraint_probe": 330,
+      "local_rag": 372,
+      "official_only_rag": 372,
+      "llm_generation": 1488,
+      "natural_source_linked": 500
+    },
+    "by_source_dataset": {
+      "controlled_diverse_prefilled": 372,
+      "mp_balanced_constraints_v3": 8000,
+      "supplementary_constraint_coverage": 330,
+      "local_rag_naive": 372,
+      "local_rag_official": 372,
+      "qwen_max_naive": 372,
+      "qwen_max_safety": 372,
+      "deepseek_r1_naive": 372,
+      "deepseek_r1_safety": 372,
+      "natural_noisy_arxiv_v2": 500
+    },
+    "by_model": {
+      "prefilled_context_support": 372,
+      "mp_property_derived": 8000,
+      "llm_diverse_probe": 330,
+      "local_rule_rag": 744,
+      "qwen-max": 744,
+      "deepseek-r1": 744,
+      "extractive_real_arxiv": 500
+    },
+    "by_mode": {
+      "diverse_prefilled": 372,
+      "controlled_balanced": 8000,
+      "constraint_coverage": 330,
+      "naive_context": 1116,
+      "official_only": 372,
+      "safety_aware": 744,
+      "matched_and_mismatched": 500
+    },
+    "by_document_status": {
+      "current": 4178,
+      "outdated_or_incorrect": 5813,
+      "incomplete": 1443
+    },
+    "by_constraint_family": {
+      "band_gap": 5572,
+      "stability": 1308,
+      "chemical_formula": 301,
+      "temperature": 439,
+      "pressure": 177,
+      "superconductivity": 226,
+      "formation_energy": 3218,
+      "none": 25,
+      "natural_claim": 168
+    },
+    "by_source_kind": {
+      "materials_project_derived": 9048,
+      "synthetic_constraint_probe": 210,
+      "derived_response": 1586,
+      "real_arxiv_abstract": 590
+    }
+  },
+  "v3_changes": [
+    "Expanded natural arXiv source-linked records from 100 to 500 using 254 unique public arXiv sources.",
+    "Re-collected 1000 live Materials Project rows with the updated API key.",
+    "Added 8000 MP-derived balanced controlled records from the 1000 live Materials Project rows.",
+    "Added 330 supplementary constraint coverage probe records for low-frequency constraint families.",
+    "RAGAS and dual-judge subsets are re-stratified over source_dataset in addition to role/model/mode/status/constraint.",
+    "Primary split uses a 500-record cap per constraint family to let the expanded MP data enter the main dataset while keeping band_gap below 20%."
+  ]
+}

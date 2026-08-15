@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-08-14T09:19:42.746823+00:00",
+  "rule_version": "canonical_v3_frozen_after_expert_adjudication",
+  "file_sha256": {
+    "src/sret_materials_rag/evaluation/constraints.py": "a72949793a603f6debc513dc2bab2dab6f5127ed48aa7301d200edbd4a69f7d9",
+    "src/sret_materials_rag/evaluation/faithfulness_evaluators.py": "b042f998290f65dde2bb6a5b94dd2c6030565dbee9a4d251dfd87a64ed0a9f76",
+    "scripts/run_frozen_heldout_rag_benchmark.py": "ce4a108a01e7c3e71d351ac81aecb2ffaff6180e1e466285e3b2c3ba430a4ecf"
+  },
+  "heldout_response_ids_sha256": "91fc3124f30d1d95f695b2b81dc00410011a0e0db1ff66cd4a6c88858738ed81",
+  "heldout_base_task_ids_sha256": "1e26413321cb0aefc5ed67724e2b2460998221dc227c1a56936151eccfa95668",
+  "excluded_development_base_tasks": 1653
+}

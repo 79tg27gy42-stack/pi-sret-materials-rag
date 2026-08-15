@@ -1,0 +1,26 @@
+[project]
+name = "pi-sret-materials-rag"
+version = "0.1.0"
+description = "Reproducible code and data for PI-SRET materials RAG diagnostics."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.8",
+  "numpy>=1.24",
+  "openpyxl>=3.1",
+  "pandas>=2.0",
+  "pyyaml>=6.0",
+  "requests>=2.31",
+  "scikit-learn>=1.4",
+  "datasets>=2.18",
+  "ragas>=0.4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]

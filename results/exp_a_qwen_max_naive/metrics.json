@@ -1,0 +1,46 @@
+{
+  "experiment": "semantic_constraint_divergence_qwen_max_naive",
+  "hypothesis": "H1",
+  "n_samples": 372,
+  "faithfulness_method": "manual_column",
+  "pearson_r": 0.7909371044050595,
+  "pearson_bootstrap_ci": [
+    0.7558399332601823,
+    0.8208351344974164
+  ],
+  "spearman_rho": 0.7835906730829758,
+  "spearman_bootstrap_ci": [
+    0.7470790347514367,
+    0.814164674266729
+  ],
+  "mean_faithfulness": 0.5900537634408602,
+  "mean_constraint_score": 0.6129032258064516,
+  "violation_rate": 0.3870967741935484,
+  "by_document_status": {
+    "current": {
+      "n_samples": 60,
+      "pearson_r": null,
+      "pearson_bootstrap_ci": [
+        null,
+        null
+      ],
+      "mean_faithfulness": 1.0,
+      "mean_constraint_score": 1.0,
+      "violation_rate": 0.0
+    },
+    "outdated_or_incorrect": {
+      "n_samples": 312,
+      "pearson_r": 0.7577398647614545,
+      "pearson_bootstrap_ci": [
+        0.7183109711417637,
+        0.794460573003656
+      ],
+      "mean_faithfulness": 0.5112179487179487,
+      "mean_constraint_score": 0.5384615384615384,
+      "violation_rate": 0.46153846153846156
+    }
+  },
+  "expert_agreement": null,
+  "target_pearson_r_upper_bound": 0.3,
+  "falsification_pearson_r": 0.7
+}

@@ -1,0 +1,9 @@
+variant,description,n,auto_violation_rate,judge_violation_rate,agreement,cohen_kappa,false_positive_count,false_negative_count
+full_optimized,All optimized PI-SRET violations,2466,0.45093268450932683,0.513787510137875,0.8860502838605029,0.7727156139157428,63,218
+l0_only,Only shallow range/format violations,2466,0.129764801297648,0.513787510137875,0.5843471208434712,0.18532859847447108,39,986
+l1_only,Only domain consistency / evidence violations,2466,0.32116788321167883,0.513787510137875,0.7879156528791565,0.5799738549830878,24,499
+without_formation_energy_violations,Ignore formation-energy-specific violation IDs,2466,0.3560421735604217,0.513787510137875,0.7968369829683698,0.596874492204503,56,445
+without_band_gap_violations,Ignore band-gap-specific violation IDs,2466,0.3061638280616383,0.513787510137875,0.7412814274128142,0.4880357894777945,63,575
+strict_no_source_reliability_exception,Add strict invalid-value flags without refusal/caveat exceptions,2466,0.5004055150040552,0.513787510137875,0.8560421735604218,0.7120779079825424,161,194
+drop_formation_energy_records,Exclude records whose stratification family is formation_energy,1966,0.44659206510681587,0.4664292980671414,0.9231943031536114,0.845278983154377,56,95
+drop_band_gap_records,Exclude records whose stratification family is band_gap,1966,0.3819938962360122,0.4491353001017294,0.8728382502543235,0.73942013956265,59,191

@@ -1,0 +1,41 @@
+project:
+  name: sret-materials-rag
+  primary_domain: materials
+  theory_version: SRET_V3
+
+experiment_a:
+  name: semantic_constraint_divergence_diverse_prefilled
+  hypothesis: H1
+  input_path: data/processed/h1_expanded_diverse_with_faithfulness.jsonl
+  annotation_path: data/annotations/h1_author_audit_diverse_prefilled_merged.csv
+  faithfulness_method: manual_column
+  constraint_path: data/constraints/materials_constraints.yaml
+  output_dir: results/exp_a_diverse_prefilled
+  target_pearson_r_upper_bound: 0.3
+  falsification_pearson_r: 0.7
+  bootstrap_samples: 1000
+  random_seed: 42
+  readiness_thresholds:
+    min_samples: 100
+    preferred_samples: 200
+    min_status_groups: 3
+    validation_mode: author_audit
+    min_expert_labeled: 0
+    min_author_audited: 30
+    publishable_faithfulness_methods:
+      - provided_column
+      - manual_column
+      - heuristic_context_support
+      - llm_judge
+      - ragas
+      - trulens
+
+experiment_b:
+  name: causal_vs_correlational_attribution
+  hypothesis: H2
+  status: scaffold
+
+experiment_c:
+  name: minimal_repair_achievability
+  hypothesis: H3
+  status: scaffold

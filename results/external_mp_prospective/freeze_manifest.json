@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-08-14T11:09:20.844476+00:00",
+  "git_commit": "8c33b58ffcfdbce4b0e7b645f3aa83a28650425b",
+  "rule_version": "src/sret_materials_rag/evaluation/constraints.py",
+  "thresholds": {
+    "band_gap_upper_ev": 15.0,
+    "formation_energy_lower_ev_atom": -4.0,
+    "formation_energy_upper_ev_atom": 1.0,
+    "conductivity_gap_ev": 0.1,
+    "elemental_reference_tolerance_ev_atom": 0.05
+  },
+  "source": "data/sources/materials_project_candidates_v3.csv",
+  "n_instances": 51,
+  "n_materials": 17,
+  "semantic_estimators": [
+    "lexical_overlap",
+    "nli_heuristic"
+  ],
+  "prompt_version": "external_mp_context_answer_v1",
+  "generation_prompt": "Answer the materials-science question using only the provided context. Be concise and preserve units. If the context is insufficient, state that the context does not specify the answer."
+}

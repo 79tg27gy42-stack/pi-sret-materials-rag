@@ -1,0 +1,9 @@
+{
+  "input": "data/processed/canonical_v3/dual_judge_stratified_200_v3.jsonl",
+  "backend": "llm",
+  "n_samples": 200,
+  "agreement_rate": 0.88,
+  "auto_violation_rate": 0.455,
+  "judge_violation_rate": 0.5,
+  "n_disagreements": 24
+}

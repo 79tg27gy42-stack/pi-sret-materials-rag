@@ -1,0 +1,30 @@
+{
+  "experiment": "causal_vs_correlational_attribution_pilot",
+  "hypothesis": "H2",
+  "n_samples": 372,
+  "n_error_samples": 172,
+  "correlational_accuracy": 0.0,
+  "causal_intervention_accuracy": 1.0,
+  "accuracy_delta": 1.0,
+  "correlational_coarse_accuracy": 0.25,
+  "causal_intervention_coarse_accuracy": 1.0,
+  "coarse_accuracy_delta": 0.75,
+  "gold_distribution": {
+    "no_error": 200,
+    "retrieval_context_error": 129,
+    "retrieval_context_incomplete": 42,
+    "generation_constraint_error": 1
+  },
+  "correlational_prediction_distribution": {
+    "no_error": 200,
+    "generation_error": 130,
+    "retrieval_context_error": 42
+  },
+  "causal_prediction_distribution": {
+    "no_error": 200,
+    "retrieval_context_error": 129,
+    "retrieval_context_incomplete": 42,
+    "generation_constraint_error": 1
+  },
+  "scope_note": "Pilot attribution uses constructed document_status as gold labels. This validates the attribution pipeline, not a final human-labeled causal study."
+}

@@ -1,0 +1,9 @@
+constraint_family,n,expert_a_violation,expert_b_violation,expert_agreement,third_human_adjudicated_violation,auto_precision,auto_recall,auto_f1
+band_gap,42,31,27,0.9047619047619048,29,0.9666666666666667,1.0,0.983050847457627
+chemical_formula,13,4,4,1.0,4,1.0,1.0,1.0
+formation_energy,41,14,13,0.975609756097561,13,0.6190476190476191,1.0,0.7647058823529412
+natural_claim,14,7,0,0.5,0,,,
+pressure,13,3,1,0.8461538461538461,1,1.0,1.0,1.0
+stability,40,35,34,0.975,34,0.9714285714285714,1.0,0.9855072463768115
+superconductivity,14,8,0,0.42857142857142855,2,0.0,0.0,0.0
+temperature,23,6,2,0.8260869565217391,2,0.5,0.5,0.5

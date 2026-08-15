@@ -1,0 +1,12 @@
+project:
+  name: sret-materials-rag
+  primary_domain: materials
+  theory_version: SRET_V3
+
+experiment_b:
+  name: causal_vs_correlational_attribution_pilot
+  hypothesis: H2
+  input_path: data/candidates/h1_expanded_diverse_with_faithfulness.csv
+  output_dir: results/exp_b_attribution
+  random_seed: 42
+

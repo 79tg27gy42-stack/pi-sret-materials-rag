@@ -1,0 +1,58 @@
+{
+  "experiment": "minimal_constraint_repair_pilot",
+  "hypothesis": "H3",
+  "n_samples": 372,
+  "n_repaired": 172,
+  "repair_success_rate": 1.0,
+  "mean_constraint_before": 0.5376344086021505,
+  "mean_constraint_after": 1.0,
+  "mean_constraint_gain": 0.4623655913978495,
+  "mean_lexical_alignment_before": 0.5082624066495034,
+  "mean_lexical_alignment_after": 0.38420596860999334,
+  "mean_lexical_alignment_delta": -0.12405643803951005,
+  "mean_answer_usefulness_before": 1.0,
+  "mean_answer_usefulness_after": 0.9973118279569892,
+  "mean_answer_usefulness_delta": -0.002688172043010753,
+  "repair_strategy_distribution": {
+    "none": 200,
+    "non_negative_band_gap": 84,
+    "cautious_stability_claim": 42,
+    "valid_chemical_symbols": 15,
+    "non_negative_absolute_temperature": 15,
+    "non_negative_pressure": 15,
+    "band_gap_physical_range": 1
+  },
+  "by_document_status": {
+    "current": {
+      "n_samples": 144,
+      "n_repaired": 1,
+      "mean_constraint_before": 0.9930555555555556,
+      "mean_constraint_after": 1.0,
+      "repair_success_rate": 1.0,
+      "mean_lexical_alignment_delta": -0.0032407407407407406,
+      "mean_answer_usefulness_after": 0.9930555555555556,
+      "mean_answer_usefulness_delta": -0.006944444444444444
+    },
+    "incomplete": {
+      "n_samples": 84,
+      "n_repaired": 42,
+      "mean_constraint_before": 0.5,
+      "mean_constraint_after": 1.0,
+      "repair_success_rate": 1.0,
+      "mean_lexical_alignment_delta": -0.011817226890756302,
+      "mean_answer_usefulness_after": 1.0,
+      "mean_answer_usefulness_delta": 0.0
+    },
+    "outdated_or_incorrect": {
+      "n_samples": 144,
+      "n_repaired": 129,
+      "mean_constraint_before": 0.10416666666666667,
+      "mean_constraint_after": 1.0,
+      "repair_success_rate": 1.0,
+      "mean_lexical_alignment_delta": -0.3103450085083857,
+      "mean_answer_usefulness_after": 1.0,
+      "mean_answer_usefulness_delta": 0.0
+    }
+  },
+  "scope_note": "Pilot repair uses rule-based minimal safety rewrites over constructed answers. It tests constraint repair achievability, not final answer correctness."
+}

@@ -1,0 +1,7 @@
+disagreement_type,auto_violation_family,count
+auto_false_negative,no_auto_violation,218
+auto_false_positive,valid_chemical_symbols,39
+auto_false_positive,cautious_stability_claim,12
+auto_false_positive,cautious_superconductivity_claim,5
+auto_false_positive,elemental_formation_energy_reference_conflict,5
+auto_false_positive,formation_energy_typical_range,4

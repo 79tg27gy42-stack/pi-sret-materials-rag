@@ -1,0 +1,11 @@
+{
+  "input": "data/processed/canonical_v3/dual_judge_stratified_200_v3.jsonl",
+  "backend": "llm",
+  "n_samples": 200,
+  "agreement_rate": 0.84,
+  "auto_violation_rate": 0.455,
+  "judge_violation_rate": 0.545,
+  "n_disagreements": 32,
+  "cohen_kappa_vs_auto_constraint": 0.6825711734946929,
+  "agreement_vs_auto_constraint": 0.84
+}

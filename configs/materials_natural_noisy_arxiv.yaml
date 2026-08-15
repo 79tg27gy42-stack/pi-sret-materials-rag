@@ -1,0 +1,30 @@
+project:
+  name: sret-materials-rag
+  primary_domain: materials
+  theory_version: SRET_V3
+
+experiment_a:
+  name: semantic_constraint_divergence_natural_noisy_arxiv
+  hypothesis: H1
+  input_path: data/processed/natural_noisy_arxiv_outputs.jsonl
+  annotation_path: data/annotations/natural_noisy_arxiv_author_audit.csv
+  output_dir: results/exp_a_natural_noisy_arxiv
+  faithfulness_method: manual_column
+  bootstrap_samples: 1000
+  random_seed: 42
+  target_pearson_r_upper_bound: 0.3
+  falsification_pearson_r: 0.7
+
+experiment_b:
+  name: attribution_natural_noisy_arxiv
+  hypothesis: H2
+  input_path: data/rag_outputs/natural_noisy_arxiv_outputs.csv
+  output_dir: results/exp_b_natural_noisy_arxiv
+  random_seed: 42
+
+experiment_c:
+  name: repair_natural_noisy_arxiv
+  hypothesis: H3
+  input_path: data/rag_outputs/natural_noisy_arxiv_outputs.csv
+  output_dir: results/exp_c_natural_noisy_arxiv
+  random_seed: 42

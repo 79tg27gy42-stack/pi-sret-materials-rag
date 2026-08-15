@@ -1,0 +1,5 @@
+estimator,score_column,high_support_threshold,high_support_low_constraint_cases,pi_sret_violation_set_size,overlap_with_pi_sret_violation_set,note
+RAGAS,ragas_faithfulness,0.8,54,164,54,Divergence cases are defined as high support intersected with PI-SRET constraint failure.
+Lexical,lexical_overlap_score,0.6666666666666666,103,164,103,Divergence cases are defined as high support intersected with PI-SRET constraint failure.
+Hashing,embedding_similarity_hashing_score,0.33706122221924645,90,164,90,Divergence cases are defined as high support intersected with PI-SRET constraint failure.
+NLI-style,nli_heuristic_score,0.75,138,164,138,Divergence cases are defined as high support intersected with PI-SRET constraint failure.

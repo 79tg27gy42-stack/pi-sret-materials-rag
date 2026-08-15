@@ -1,0 +1,8 @@
+{
+  "n_files": 125,
+  "n_existing": 125,
+  "n_missing": 0,
+  "missing": [],
+  "tsv": "results/canonical_v3_q1_evidence/fair_release_manifest_v3.tsv",
+  "json": "results/canonical_v3_q1_evidence/fair_release_manifest_v3.json"
+}

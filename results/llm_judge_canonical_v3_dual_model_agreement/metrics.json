@@ -1,0 +1,9 @@
+{
+  "merge_key": "response_id",
+  "n_samples": 200,
+  "qwen_plus_violation_rate": 0.545,
+  "qwen_max_violation_rate": 0.5,
+  "dual_model_agreement_rate": 0.915,
+  "dual_model_cohen_kappa": 0.8300000000000001,
+  "n_dual_model_disagreements": 17
+}

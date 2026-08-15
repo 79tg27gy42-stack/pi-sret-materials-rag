@@ -1,0 +1,916 @@
+{
+  "analysis_scope": "canonical_v3_completed_real_results",
+  "bootstrap_samples": 5000,
+  "random_seed": 42,
+  "faithfulness_threshold": 0.8,
+  "constraint_pass_threshold": 1.0,
+  "ragas": {
+    "n": 372,
+    "divergence_cases": 54,
+    "divergence_rate": {
+      "value": 0.14516129032258066,
+      "ci_low": 0.10317371343156095,
+      "ci_high": 0.1964834448705416,
+      "n": 372
+    },
+    "mean_ragas_faithfulness": {
+      "value": 0.6721774193548388,
+      "ci_low": 0.6148914066702528,
+      "ci_high": 0.7248781632886753,
+      "n": 372
+    },
+    "mean_answer_relevancy": {
+      "value": 0.6911508892503198,
+      "ci_low": 0.6569533642370549,
+      "ci_high": 0.7244609157744978,
+      "n": 372
+    },
+    "mean_pi_sret_constraint_score": {
+      "value": 0.5591397849462365,
+      "ci_low": 0.4545382850587898,
+      "ci_high": 0.6422783357245337,
+      "n": 372
+    },
+    "pi_sret_violation_rate": {
+      "value": 0.44086021505376344,
+      "ci_low": 0.3577216642754663,
+      "ci_high": 0.5454617149412101,
+      "n": 372
+    },
+    "divergence_by_family": [
+      {
+        "constraint_family": "formation_energy",
+        "divergence_cases": 22
+      },
+      {
+        "constraint_family": "band_gap",
+        "divergence_cases": 21
+      },
+      {
+        "constraint_family": "superconductivity",
+        "divergence_cases": 4
+      },
+      {
+        "constraint_family": "chemical_formula",
+        "divergence_cases": 2
+      },
+      {
+        "constraint_family": "stability",
+        "divergence_cases": 2
+      },
+      {
+        "constraint_family": "temperature",
+        "divergence_cases": 2
+      },
+      {
+        "constraint_family": "pressure",
+        "divergence_cases": 1
+      }
+    ],
+    "divergence_by_document_status": [
+      {
+        "document_status": "outdated_or_incorrect",
+        "divergence_cases": 33
+      },
+      {
+        "document_status": "current",
+        "divergence_cases": 16
+      },
+      {
+        "document_status": "incomplete",
+        "divergence_cases": 5
+      }
+    ],
+    "divergence_by_violation": [
+      {
+        "pi_sret_violation": "band_gap_physical_range",
+        "count": 15
+      },
+      {
+        "pi_sret_violation": "elemental_formation_energy_reference_conflict",
+        "count": 15
+      },
+      {
+        "pi_sret_violation": "formation_energy_typical_range",
+        "count": 14
+      },
+      {
+        "pi_sret_violation": "valid_chemical_symbols",
+        "count": 8
+      },
+      {
+        "pi_sret_violation": "non_negative_band_gap",
+        "count": 4
+      },
+      {
+        "pi_sret_violation": "cautious_stability_claim",
+        "count": 1
+      },
+      {
+        "pi_sret_violation": "cautious_superconductivity_claim",
+        "count": 1
+      },
+      {
+        "pi_sret_violation": "conductivity_band_gap_consistency",
+        "count": 1
+      },
+      {
+        "pi_sret_violation": "non_negative_absolute_temperature",
+        "count": 1
+      },
+      {
+        "pi_sret_violation": "non_negative_pressure",
+        "count": 1
+      }
+    ]
+  },
+  "semantic_baselines": {
+    "ragas_high_support_rate_for_calibration": 0.5967741935483871,
+    "methods": [
+      {
+        "method": "ragas_faithfulness",
+        "n": 372,
+        "mean_score": 0.6721774193548388,
+        "score_ci_low": 0.6148914066702528,
+        "score_ci_high": 0.7248781632886753,
+        "pearson_with_constraint": 0.5905262152834531,
+        "spearman_with_constraint": 0.5597314652463428,
+        "fixed_threshold": 0.8,
+        "fixed_high_support_cases": 222,
+        "fixed_high_support_low_constraint_cases": 54,
+        "fixed_high_support_low_constraint_rate": 0.24324324324324326,
+        "ragas_rate_calibrated_threshold": 0.7997311827956988,
+        "calibrated_high_support_cases": 222,
+        "calibrated_high_support_low_constraint_cases": 54,
+        "calibrated_high_support_low_constraint_rate": 0.24324324324324326
+      },
+      {
+        "method": "lexical_overlap",
+        "n": 372,
+        "mean_score": 0.7279008763198069,
+        "score_ci_low": 0.6812349806135646,
+        "score_ci_high": 0.7644975250816847,
+        "pearson_with_constraint": 0.33109012991222647,
+        "spearman_with_constraint": 0.40413028525674777,
+        "fixed_threshold": 0.8,
+        "fixed_high_support_cases": 136,
+        "fixed_high_support_low_constraint_cases": 10,
+        "fixed_high_support_low_constraint_rate": 0.07352941176470588,
+        "ragas_rate_calibrated_threshold": 0.6666666666666666,
+        "calibrated_high_support_cases": 264,
+        "calibrated_high_support_low_constraint_cases": 103,
+        "calibrated_high_support_low_constraint_rate": 0.39015151515151514
+      },
+      {
+        "method": "embedding_similarity_hashing",
+        "n": 372,
+        "mean_score": 0.3816712505314552,
+        "score_ci_low": 0.34092927475010154,
+        "score_ci_high": 0.41902116866188727,
+        "pearson_with_constraint": 0.17137619113308183,
+        "spearman_with_constraint": 0.21536512433397786,
+        "fixed_threshold": 0.8,
+        "fixed_high_support_cases": 8,
+        "fixed_high_support_low_constraint_cases": 4,
+        "fixed_high_support_low_constraint_rate": 0.5,
+        "ragas_rate_calibrated_threshold": 0.33706122221924645,
+        "calibrated_high_support_cases": 222,
+        "calibrated_high_support_low_constraint_cases": 90,
+        "calibrated_high_support_low_constraint_rate": 0.40540540540540543
+      },
+      {
+        "method": "nli_heuristic",
+        "n": 372,
+        "mean_score": 0.7801456189773253,
+        "score_ci_low": 0.729994870107105,
+        "score_ci_high": 0.8183720831092776,
+        "pearson_with_constraint": 0.25276328055033565,
+        "spearman_with_constraint": 0.40130942846605905,
+        "fixed_threshold": 0.8,
+        "fixed_high_support_cases": 136,
+        "fixed_high_support_low_constraint_cases": 10,
+        "fixed_high_support_low_constraint_rate": 0.07352941176470588,
+        "ragas_rate_calibrated_threshold": 0.75,
+        "calibrated_high_support_cases": 309,
+        "calibrated_high_support_low_constraint_cases": 138,
+        "calibrated_high_support_low_constraint_rate": 0.44660194174757284
+      }
+    ]
+  },
+  "llm_judge": {
+    "n": 2466,
+    "agreement_rate": {
+      "value": 0.8860502838605029,
+      "ci_low": 0.8571428571428571,
+      "ci_high": 0.9105115452138256,
+      "n": 2466
+    },
+    "cohen_kappa": {
+      "value": 0.7727156139157428,
+      "ci_low": 0.7146508360391078,
+      "ci_high": 0.8189073032921131,
+      "n": 2466
+    },
+    "auto_violation_rate": {
+      "value": 0.45093268450932683,
+      "ci_low": 0.3813121041545352,
+      "ci_high": 0.5320970042796006,
+      "n": 2466
+    },
+    "judge_violation_rate": {
+      "value": 0.513787510137875,
+      "ci_low": 0.4421798231247953,
+      "ci_high": 0.5933687740615975,
+      "n": 2466
+    },
+    "disagreements": 281,
+    "confusion_matrix": [
+      {
+        "qwen_plus_judge": "no_violation",
+        "pi_sret_auto": "no_violation",
+        "count": 1136
+      },
+      {
+        "qwen_plus_judge": "no_violation",
+        "pi_sret_auto": "violation",
+        "count": 63
+      },
+      {
+        "qwen_plus_judge": "violation",
+        "pi_sret_auto": "no_violation",
+        "count": 218
+      },
+      {
+        "qwen_plus_judge": "violation",
+        "pi_sret_auto": "violation",
+        "count": 1049
+      }
+    ],
+    "disagreement_taxonomy": [
+      {
+        "disagreement_type": "auto_false_negative",
+        "count": 218,
+        "share_of_all": 0.08840227088402271,
+        "share_of_disagreements": 0.7758007117437722
+      },
+      {
+        "disagreement_type": "auto_false_positive",
+        "count": 63,
+        "share_of_all": 0.025547445255474453,
+        "share_of_disagreements": 0.22419928825622776
+      }
+    ]
+  },
+  "dual_judge": {
+    "n": 200,
+    "agreement_rate": {
+      "value": 0.915,
+      "ci_low": 0.875,
+      "ci_high": 0.95,
+      "n": 200
+    },
+    "cohen_kappa": {
+      "value": 0.8300000000000001,
+      "ci_low": 0.7494437612295697,
+      "ci_high": 0.9001497753369945,
+      "n": 200
+    },
+    "qwen_plus_violation_rate": {
+      "value": 0.545,
+      "ci_low": 0.475,
+      "ci_high": 0.615,
+      "n": 200
+    },
+    "qwen_max_violation_rate": {
+      "value": 0.5,
+      "ci_low": 0.43,
+      "ci_high": 0.57,
+      "n": 200
+    },
+    "disagreements": 17,
+    "confusion_matrix": [
+      {
+        "qwen_max_judge": "no_violation",
+        "qwen_plus_judge": "no_violation",
+        "count": 87
+      },
+      {
+        "qwen_max_judge": "no_violation",
+        "qwen_plus_judge": "violation",
+        "count": 13
+      },
+      {
+        "qwen_max_judge": "violation",
+        "qwen_plus_judge": "no_violation",
+        "count": 4
+      },
+      {
+        "qwen_max_judge": "violation",
+        "qwen_plus_judge": "violation",
+        "count": 96
+      }
+    ],
+    "disagreement_taxonomy": [
+      {
+        "dual_disagreement_type": "plus_only_violation",
+        "count": 13,
+        "share_of_all": 0.065,
+        "share_of_disagreements": 0.7647058823529411
+      },
+      {
+        "dual_disagreement_type": "max_only_violation",
+        "count": 4,
+        "share_of_all": 0.02,
+        "share_of_disagreements": 0.23529411764705882
+      }
+    ]
+  },
+  "threshold_sensitivity": [
+    {
+      "tau_f": 0.5,
+      "tau_g": 0.5,
+      "n": 372,
+      "high_support_cases": 272,
+      "low_constraint_cases": 164,
+      "divergence_cases": 72,
+      "divergence_rate_all": 0.1935483870967742,
+      "divergence_rate_all_ci_low": 0.14284976387249115,
+      "divergence_rate_all_ci_high": 0.25739866421004143,
+      "risk_rate_among_high_support": 0.2647058823529412,
+      "risk_rate_among_high_support_ci_low": 0.18956043956043955,
+      "risk_rate_among_high_support_ci_high": 0.3623205025927403
+    },
+    {
+      "tau_f": 0.5,
+      "tau_g": 0.75,
+      "n": 372,
+      "high_support_cases": 272,
+      "low_constraint_cases": 164,
+      "divergence_cases": 72,
+      "divergence_rate_all": 0.1935483870967742,
+      "divergence_rate_all_ci_low": 0.14284976387249115,
+      "divergence_rate_all_ci_high": 0.25739866421004143,
+      "risk_rate_among_high_support": 0.2647058823529412,
+      "risk_rate_among_high_support_ci_low": 0.18956043956043955,
+      "risk_rate_among_high_support_ci_high": 0.3623205025927403
+    },
+    {
+      "tau_f": 0.5,
+      "tau_g": 1.0,
+      "n": 372,
+      "high_support_cases": 272,
+      "low_constraint_cases": 164,
+      "divergence_cases": 72,
+      "divergence_rate_all": 0.1935483870967742,
+      "divergence_rate_all_ci_low": 0.14284976387249115,
+      "divergence_rate_all_ci_high": 0.25739866421004143,
+      "risk_rate_among_high_support": 0.2647058823529412,
+      "risk_rate_among_high_support_ci_low": 0.18956043956043955,
+      "risk_rate_among_high_support_ci_high": 0.3623205025927403
+    },
+    {
+      "tau_f": 0.6,
+      "tau_g": 0.5,
+      "n": 372,
+      "high_support_cases": 239,
+      "low_constraint_cases": 164,
+      "divergence_cases": 55,
+      "divergence_rate_all": 0.1478494623655914,
+      "divergence_rate_all_ci_low": 0.1053862855882631,
+      "divergence_rate_all_ci_high": 0.19939577039274925,
+      "risk_rate_among_high_support": 0.2301255230125523,
+      "risk_rate_among_high_support_ci_low": 0.16140323117921385,
+      "risk_rate_among_high_support_ci_high": 0.3214330581478822
+    },
+    {
+      "tau_f": 0.6,
+      "tau_g": 0.75,
+      "n": 372,
+      "high_support_cases": 239,
+      "low_constraint_cases": 164,
+      "divergence_cases": 55,
+      "divergence_rate_all": 0.1478494623655914,
+      "divergence_rate_all_ci_low": 0.1053862855882631,
+      "divergence_rate_all_ci_high": 0.19939577039274925,
+      "risk_rate_among_high_support": 0.2301255230125523,
+      "risk_rate_among_high_support_ci_low": 0.16140323117921385,
+      "risk_rate_among_high_support_ci_high": 0.3214330581478822
+    },
+    {
+      "tau_f": 0.6,
+      "tau_g": 1.0,
+      "n": 372,
+      "high_support_cases": 239,
+      "low_constraint_cases": 164,
+      "divergence_cases": 55,
+      "divergence_rate_all": 0.1478494623655914,
+      "divergence_rate_all_ci_low": 0.1053862855882631,
+      "divergence_rate_all_ci_high": 0.19939577039274925,
+      "risk_rate_among_high_support": 0.2301255230125523,
+      "risk_rate_among_high_support_ci_low": 0.16140323117921385,
+      "risk_rate_among_high_support_ci_high": 0.3214330581478822
+    },
+    {
+      "tau_f": 0.7,
+      "tau_g": 0.5,
+      "n": 372,
+      "high_support_cases": 225,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24,
+      "risk_rate_among_high_support_ci_low": 0.17266004455318995,
+      "risk_rate_among_high_support_ci_high": 0.323080808080808
+    },
+    {
+      "tau_f": 0.7,
+      "tau_g": 0.75,
+      "n": 372,
+      "high_support_cases": 225,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24,
+      "risk_rate_among_high_support_ci_low": 0.17266004455318995,
+      "risk_rate_among_high_support_ci_high": 0.323080808080808
+    },
+    {
+      "tau_f": 0.7,
+      "tau_g": 1.0,
+      "n": 372,
+      "high_support_cases": 225,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24,
+      "risk_rate_among_high_support_ci_low": 0.17266004455318995,
+      "risk_rate_among_high_support_ci_high": 0.323080808080808
+    },
+    {
+      "tau_f": 0.8,
+      "tau_g": 0.5,
+      "n": 372,
+      "high_support_cases": 222,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24324324324324326,
+      "risk_rate_among_high_support_ci_low": 0.17338709677419356,
+      "risk_rate_among_high_support_ci_high": 0.32736484803188826
+    },
+    {
+      "tau_f": 0.8,
+      "tau_g": 0.75,
+      "n": 372,
+      "high_support_cases": 222,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24324324324324326,
+      "risk_rate_among_high_support_ci_low": 0.17338709677419356,
+      "risk_rate_among_high_support_ci_high": 0.32736484803188826
+    },
+    {
+      "tau_f": 0.8,
+      "tau_g": 1.0,
+      "n": 372,
+      "high_support_cases": 222,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24324324324324326,
+      "risk_rate_among_high_support_ci_low": 0.17338709677419356,
+      "risk_rate_among_high_support_ci_high": 0.32736484803188826
+    },
+    {
+      "tau_f": 0.9,
+      "tau_g": 0.5,
+      "n": 372,
+      "high_support_cases": 221,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24434389140271492,
+      "risk_rate_among_high_support_ci_low": 0.17372881355932204,
+      "risk_rate_among_high_support_ci_high": 0.33177623928679095
+    },
+    {
+      "tau_f": 0.9,
+      "tau_g": 0.75,
+      "n": 372,
+      "high_support_cases": 221,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24434389140271492,
+      "risk_rate_among_high_support_ci_low": 0.17372881355932204,
+      "risk_rate_among_high_support_ci_high": 0.33177623928679095
+    },
+    {
+      "tau_f": 0.9,
+      "tau_g": 1.0,
+      "n": 372,
+      "high_support_cases": 221,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24434389140271492,
+      "risk_rate_among_high_support_ci_low": 0.17372881355932204,
+      "risk_rate_among_high_support_ci_high": 0.33177623928679095
+    },
+    {
+      "tau_f": 0.95,
+      "tau_g": 0.5,
+      "n": 372,
+      "high_support_cases": 221,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24434389140271492,
+      "risk_rate_among_high_support_ci_low": 0.17372881355932204,
+      "risk_rate_among_high_support_ci_high": 0.33177623928679095
+    },
+    {
+      "tau_f": 0.95,
+      "tau_g": 0.75,
+      "n": 372,
+      "high_support_cases": 221,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24434389140271492,
+      "risk_rate_among_high_support_ci_low": 0.17372881355932204,
+      "risk_rate_among_high_support_ci_high": 0.33177623928679095
+    },
+    {
+      "tau_f": 0.95,
+      "tau_g": 1.0,
+      "n": 372,
+      "high_support_cases": 221,
+      "low_constraint_cases": 164,
+      "divergence_cases": 54,
+      "divergence_rate_all": 0.14516129032258066,
+      "divergence_rate_all_ci_low": 0.10317371343156095,
+      "divergence_rate_all_ci_high": 0.1964834448705416,
+      "risk_rate_among_high_support": 0.24434389140271492,
+      "risk_rate_among_high_support_ci_low": 0.17372881355932204,
+      "risk_rate_among_high_support_ci_high": 0.33177623928679095
+    }
+  ],
+  "domain_guard_sensitivity": [
+    {
+      "variant": "default",
+      "band_gap_upper_ev": 15.0,
+      "formation_energy_lower_ev_atom": -4.0,
+      "formation_energy_upper_ev_atom": 1.0,
+      "conductivity_gap_ev": 0.1,
+      "elemental_reference_tolerance_ev_atom": 0.05,
+      "ragas_violation_rate": 0.44086021505376344,
+      "ragas_divergence_cases": 54,
+      "judge_agreement": 0.8860502838605029,
+      "judge_kappa": 0.7727156139157428
+    },
+    {
+      "variant": "band_gap_upper_10",
+      "band_gap_upper_ev": 10.0,
+      "formation_energy_lower_ev_atom": -4.0,
+      "formation_energy_upper_ev_atom": 1.0,
+      "conductivity_gap_ev": 0.1,
+      "elemental_reference_tolerance_ev_atom": 0.05,
+      "ragas_violation_rate": 0.44086021505376344,
+      "ragas_divergence_cases": 54,
+      "judge_agreement": 0.8860502838605029,
+      "judge_kappa": 0.7727156139157428
+    },
+    {
+      "variant": "band_gap_upper_20",
+      "band_gap_upper_ev": 20.0,
+      "formation_energy_lower_ev_atom": -4.0,
+      "formation_energy_upper_ev_atom": 1.0,
+      "conductivity_gap_ev": 0.1,
+      "elemental_reference_tolerance_ev_atom": 0.05,
+      "ragas_violation_rate": 0.3951612903225806,
+      "ragas_divergence_cases": 39,
+      "judge_agreement": 0.8365774533657745,
+      "judge_kappa": 0.6749215433439905
+    },
+    {
+      "variant": "formation_range_narrow",
+      "band_gap_upper_ev": 15.0,
+      "formation_energy_lower_ev_atom": -3.0,
+      "formation_energy_upper_ev_atom": 0.5,
+      "conductivity_gap_ev": 0.1,
+      "elemental_reference_tolerance_ev_atom": 0.05,
+      "ragas_violation_rate": 0.4435483870967742,
+      "ragas_divergence_cases": 55,
+      "judge_agreement": 0.8860502838605029,
+      "judge_kappa": 0.7726649095214568
+    },
+    {
+      "variant": "formation_range_wide",
+      "band_gap_upper_ev": 15.0,
+      "formation_energy_lower_ev_atom": -5.0,
+      "formation_energy_upper_ev_atom": 1.5,
+      "conductivity_gap_ev": 0.1,
+      "elemental_reference_tolerance_ev_atom": 0.05,
+      "ragas_violation_rate": 0.43548387096774194,
+      "ragas_divergence_cases": 52,
+      "judge_agreement": 0.8832116788321168,
+      "judge_kappa": 0.7670900887487613
+    },
+    {
+      "variant": "conductivity_gap_0_05",
+      "band_gap_upper_ev": 15.0,
+      "formation_energy_lower_ev_atom": -4.0,
+      "formation_energy_upper_ev_atom": 1.0,
+      "conductivity_gap_ev": 0.05,
+      "elemental_reference_tolerance_ev_atom": 0.05,
+      "ragas_violation_rate": 0.44086021505376344,
+      "ragas_divergence_cases": 54,
+      "judge_agreement": 0.8852392538523925,
+      "judge_kappa": 0.7711081417750814
+    },
+    {
+      "variant": "conductivity_gap_0_20",
+      "band_gap_upper_ev": 15.0,
+      "formation_energy_lower_ev_atom": -4.0,
+      "formation_energy_upper_ev_atom": 1.0,
+      "conductivity_gap_ev": 0.2,
+      "elemental_reference_tolerance_ev_atom": 0.05,
+      "ragas_violation_rate": 0.44086021505376344,
+      "ragas_divergence_cases": 54,
+      "judge_agreement": 0.8860502838605029,
+      "judge_kappa": 0.7727156139157428
+    },
+    {
+      "variant": "element_reference_0_00",
+      "band_gap_upper_ev": 15.0,
+      "formation_energy_lower_ev_atom": -4.0,
+      "formation_energy_upper_ev_atom": 1.0,
+      "conductivity_gap_ev": 0.1,
+      "elemental_reference_tolerance_ev_atom": 0.0,
+      "ragas_violation_rate": 0.4596774193548387,
+      "ragas_divergence_cases": 61,
+      "judge_agreement": 0.8990267639902676,
+      "judge_kappa": 0.7984186920526866
+    },
+    {
+      "variant": "element_reference_0_10",
+      "band_gap_upper_ev": 15.0,
+      "formation_energy_lower_ev_atom": -4.0,
+      "formation_energy_upper_ev_atom": 1.0,
+      "conductivity_gap_ev": 0.1,
+      "elemental_reference_tolerance_ev_atom": 0.1,
+      "ragas_violation_rate": 0.4327956989247312,
+      "ragas_divergence_cases": 51,
+      "judge_agreement": 0.8811841038118411,
+      "judge_kappa": 0.7630729316616945
+    }
+  ],
+  "constraint_ablation": {
+    "ragas": [
+      {
+        "variant": "full_optimized",
+        "description": "All optimized PI-SRET violations",
+        "n": 372,
+        "mean_constraint_score": 0.5591397849462365,
+        "violation_rate": 0.44086021505376344,
+        "high_support_cases": 222,
+        "divergence_cases": 54,
+        "divergence_rate_all": 0.14516129032258066,
+        "risk_rate_among_high_support": 0.24324324324324326
+      },
+      {
+        "variant": "l0_only",
+        "description": "Only shallow range/format violations",
+        "n": 372,
+        "mean_constraint_score": 0.8709677419354839,
+        "violation_rate": 0.12903225806451613,
+        "high_support_cases": 222,
+        "divergence_cases": 29,
+        "divergence_rate_all": 0.07795698924731183,
+        "risk_rate_among_high_support": 0.13063063063063063
+      },
+      {
+        "variant": "l1_only",
+        "description": "Only domain consistency / evidence violations",
+        "n": 372,
+        "mean_constraint_score": 0.6881720430107527,
+        "violation_rate": 0.3118279569892473,
+        "high_support_cases": 222,
+        "divergence_cases": 25,
+        "divergence_rate_all": 0.06720430107526881,
+        "risk_rate_among_high_support": 0.11261261261261261
+      },
+      {
+        "variant": "without_formation_energy_violations",
+        "description": "Ignore formation-energy-specific violation IDs",
+        "n": 372,
+        "mean_constraint_score": 0.6478494623655914,
+        "violation_rate": 0.3521505376344086,
+        "high_support_cases": 222,
+        "divergence_cases": 32,
+        "divergence_rate_all": 0.08602150537634409,
+        "risk_rate_among_high_support": 0.14414414414414414
+      },
+      {
+        "variant": "without_band_gap_violations",
+        "description": "Ignore band-gap-specific violation IDs",
+        "n": 372,
+        "mean_constraint_score": 0.7016129032258065,
+        "violation_rate": 0.29838709677419356,
+        "high_support_cases": 222,
+        "divergence_cases": 34,
+        "divergence_rate_all": 0.0913978494623656,
+        "risk_rate_among_high_support": 0.15315315315315314
+      },
+      {
+        "variant": "strict_no_source_reliability_exception",
+        "description": "Add strict invalid-value flags without refusal/caveat exceptions",
+        "n": 372,
+        "mean_constraint_score": 0.5080645161290323,
+        "violation_rate": 0.49193548387096775,
+        "high_support_cases": 222,
+        "divergence_cases": 69,
+        "divergence_rate_all": 0.18548387096774194,
+        "risk_rate_among_high_support": 0.3108108108108108
+      },
+      {
+        "variant": "drop_formation_energy_records",
+        "description": "Exclude records whose stratification family is formation_energy",
+        "n": 298,
+        "mean_constraint_score": 0.5604026845637584,
+        "violation_rate": 0.4395973154362416,
+        "high_support_cases": 159,
+        "divergence_cases": 32,
+        "divergence_rate_all": 0.10738255033557047,
+        "risk_rate_among_high_support": 0.20125786163522014
+      },
+      {
+        "variant": "drop_band_gap_records",
+        "description": "Exclude records whose stratification family is band_gap",
+        "n": 298,
+        "mean_constraint_score": 0.6308724832214765,
+        "violation_rate": 0.3691275167785235,
+        "high_support_cases": 181,
+        "divergence_cases": 33,
+        "divergence_rate_all": 0.11073825503355705,
+        "risk_rate_among_high_support": 0.18232044198895028
+      }
+    ],
+    "llm_judge": [
+      {
+        "variant": "full_optimized",
+        "description": "All optimized PI-SRET violations",
+        "n": 2466,
+        "auto_violation_rate": 0.45093268450932683,
+        "judge_violation_rate": 0.513787510137875,
+        "agreement": 0.8860502838605029,
+        "cohen_kappa": 0.7727156139157428,
+        "false_positive_count": 63,
+        "false_negative_count": 218
+      },
+      {
+        "variant": "l0_only",
+        "description": "Only shallow range/format violations",
+        "n": 2466,
+        "auto_violation_rate": 0.129764801297648,
+        "judge_violation_rate": 0.513787510137875,
+        "agreement": 0.5843471208434712,
+        "cohen_kappa": 0.18532859847447108,
+        "false_positive_count": 39,
+        "false_negative_count": 986
+      },
+      {
+        "variant": "l1_only",
+        "description": "Only domain consistency / evidence violations",
+        "n": 2466,
+        "auto_violation_rate": 0.32116788321167883,
+        "judge_violation_rate": 0.513787510137875,
+        "agreement": 0.7879156528791565,
+        "cohen_kappa": 0.5799738549830878,
+        "false_positive_count": 24,
+        "false_negative_count": 499
+      },
+      {
+        "variant": "without_formation_energy_violations",
+        "description": "Ignore formation-energy-specific violation IDs",
+        "n": 2466,
+        "auto_violation_rate": 0.3560421735604217,
+        "judge_violation_rate": 0.513787510137875,
+        "agreement": 0.7968369829683698,
+        "cohen_kappa": 0.596874492204503,
+        "false_positive_count": 56,
+        "false_negative_count": 445
+      },
+      {
+        "variant": "without_band_gap_violations",
+        "description": "Ignore band-gap-specific violation IDs",
+        "n": 2466,
+        "auto_violation_rate": 0.3061638280616383,
+        "judge_violation_rate": 0.513787510137875,
+        "agreement": 0.7412814274128142,
+        "cohen_kappa": 0.4880357894777945,
+        "false_positive_count": 63,
+        "false_negative_count": 575
+      },
+      {
+        "variant": "strict_no_source_reliability_exception",
+        "description": "Add strict invalid-value flags without refusal/caveat exceptions",
+        "n": 2466,
+        "auto_violation_rate": 0.5004055150040552,
+        "judge_violation_rate": 0.513787510137875,
+        "agreement": 0.8560421735604218,
+        "cohen_kappa": 0.7120779079825424,
+        "false_positive_count": 161,
+        "false_negative_count": 194
+      },
+      {
+        "variant": "drop_formation_energy_records",
+        "description": "Exclude records whose stratification family is formation_energy",
+        "n": 1966,
+        "auto_violation_rate": 0.44659206510681587,
+        "judge_violation_rate": 0.4664292980671414,
+        "agreement": 0.9231943031536114,
+        "cohen_kappa": 0.845278983154377,
+        "false_positive_count": 56,
+        "false_negative_count": 95
+      },
+      {
+        "variant": "drop_band_gap_records",
+        "description": "Exclude records whose stratification family is band_gap",
+        "n": 1966,
+        "auto_violation_rate": 0.3819938962360122,
+        "judge_violation_rate": 0.4491353001017294,
+        "agreement": 0.8728382502543235,
+        "cohen_kappa": 0.73942013956265,
+        "false_positive_count": 59,
+        "false_negative_count": 191
+      }
+    ]
+  },
+  "generation_mode_ablation": [
+    {
+      "model": "qwen-max",
+      "mode": "naive_context",
+      "n": 372,
+      "mean_faithfulness": 0.5900537634408602,
+      "mean_constraint_score": 0.6129032258064516,
+      "violation_rate": 0.3870967741935484,
+      "pearson_r": 0.7909371044050595,
+      "spearman_rho": 0.7835906730829758
+    },
+    {
+      "model": "qwen-max",
+      "mode": "safety_aware",
+      "n": 372,
+      "mean_faithfulness": 0.967741935483871,
+      "mean_constraint_score": 1.0,
+      "violation_rate": 0.0,
+      "pearson_r": null,
+      "spearman_rho": null
+    },
+    {
+      "model": "deepseek-r1",
+      "mode": "naive_context",
+      "n": 372,
+      "mean_faithfulness": 0.5026881720430108,
+      "mean_constraint_score": 0.5241935483870968,
+      "violation_rate": 0.47580645161290325,
+      "pearson_r": 0.4265283202012567,
+      "spearman_rho": 0.4265360091862157
+    },
+    {
+      "model": "deepseek-r1",
+      "mode": "safety_aware",
+      "n": 372,
+      "mean_faithfulness": 0.9368279569892473,
+      "mean_constraint_score": 1.0,
+      "violation_rate": 0.0,
+      "pearson_r": null,
+      "spearman_rho": null
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+variant,description,n,mean_constraint_score,violation_rate,high_support_cases,divergence_cases,divergence_rate_all,risk_rate_among_high_support
+full_optimized,All optimized PI-SRET violations,372,0.5591397849462365,0.44086021505376344,222,54,0.14516129032258066,0.24324324324324326
+l0_only,Only shallow range/format violations,372,0.8709677419354839,0.12903225806451613,222,29,0.07795698924731183,0.13063063063063063
+l1_only,Only domain consistency / evidence violations,372,0.6881720430107527,0.3118279569892473,222,25,0.06720430107526881,0.11261261261261261
+without_formation_energy_violations,Ignore formation-energy-specific violation IDs,372,0.6478494623655914,0.3521505376344086,222,32,0.08602150537634409,0.14414414414414414
+without_band_gap_violations,Ignore band-gap-specific violation IDs,372,0.7016129032258065,0.29838709677419356,222,34,0.0913978494623656,0.15315315315315314
+strict_no_source_reliability_exception,Add strict invalid-value flags without refusal/caveat exceptions,372,0.5080645161290323,0.49193548387096775,222,69,0.18548387096774194,0.3108108108108108
+drop_formation_energy_records,Exclude records whose stratification family is formation_energy,298,0.5604026845637584,0.4395973154362416,159,32,0.10738255033557047,0.20125786163522014
+drop_band_gap_records,Exclude records whose stratification family is band_gap,298,0.6308724832214765,0.3691275167785235,181,33,0.11073825503355705,0.18232044198895028

@@ -1,0 +1,26 @@
+{
+  "n": 51,
+  "unique_materials": 17,
+  "violation_rate": 0.11764705882352941,
+  "constraint_pass_rate": 0.8823529411764706,
+  "family_distribution": {
+    "band_gap": 17,
+    "formation_energy": 17,
+    "stability": 17
+  },
+  "mean_lexical_support": 0.4226678550207962,
+  "mean_nli_proxy_support": 0.4293028322440086,
+  "evidence_level": "prospective_or_supplied_answers_scored_after_evaluator_freeze",
+  "status": "scored",
+  "answers_file": "results/external_mp_prospective/external_mp_answers.csv",
+  "model": "qwen-max",
+  "temperature": 0.0,
+  "max_tokens": 128,
+  "prompt_version": "external_mp_context_answer_v1",
+  "high_support_low_g_lexical_n": 0,
+  "high_support_low_g_nli_n": 0,
+  "high_support_low_g_lexical_rate": 0.0,
+  "high_support_low_g_nli_rate": 0.0,
+  "provider": "DashScope/OpenAI-compatible",
+  "generated_at_utc": "2026-08-14T11:00:41.752102+00:00"
+}

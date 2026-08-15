@@ -1,0 +1,21 @@
+{
+  "created_at_utc": "2026-08-14T10:41:12.167595+00:00",
+  "git_commit": "8c33b58ffcfdbce4b0e7b645f3aa83a28650425b",
+  "rule_version": "src/sret_materials_rag/evaluation/constraints.py",
+  "thresholds": {
+    "band_gap_upper_ev": 15.0,
+    "formation_energy_lower_ev_atom": -4.0,
+    "formation_energy_upper_ev_atom": 1.0,
+    "conductivity_gap_ev": 0.1,
+    "elemental_reference_tolerance_ev_atom": 0.05
+  },
+  "source": "data/sources/materials_project_candidates_v3.csv",
+  "n_instances": 150,
+  "n_materials": 50,
+  "status": "prepared_not_scored",
+  "reason": "No post-freeze model answer CSV was supplied; no external performance metric is reported.",
+  "required_answer_columns": [
+    "external_id",
+    "answer"
+  ]
+}
